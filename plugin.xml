@@ -1,0 +1,38 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="cordova-plugin-Gouxin" version="0.0.1"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:rim="http://www.blackberry.com/ns/widgets"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>Gouxin</name>
+    <description>Description</description>
+    
+    <license>Gouxin</license>
+    <keywords>cordova,Gouxin</keywords>
+    
+    <engines>
+        <engine name="cordova" version=">=2.4.0" />
+    </engines>
+    
+    
+    <js-module name="Gouxin" src="www/Gouxin.js">
+        <clobbers target="Gouxin"/>
+    </js-module>
+
+    <platform name="ios">
+
+        <config-file target="config.xml" parent="/*">
+            <feature name="Gouxin">
+                <param name="ios-package" value="Gouxin"/>
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+
+        <js-module src="www/Gouxin.js" name="Gouxin">
+            <clobbers target="Gouxin" />
+        </js-module>
+
+        <header-file src="src/ios/Gouxin.h" />
+        <source-file src="src/ios/Gouxin.m" />
+    </platform>
+</plugin>
